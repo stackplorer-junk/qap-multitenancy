@@ -17,7 +17,7 @@ class ProjectController extends Controller
     {
         abort_if(Gate::denies('project_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        $projects = Project::all();
+        $projects = Project::with(['team'])->get();
 
         return view('admin.projects.index', compact('projects'));
     }
@@ -40,6 +40,8 @@ class ProjectController extends Controller
     {
         abort_if(Gate::denies('project_edit'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
+        $project->load('team');
+
         return view('admin.projects.edit', compact('project'));
     }
 
@@ -53,6 +55,8 @@ class ProjectController extends Controller
     public function show(Project $project)
     {
         abort_if(Gate::denies('project_show'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+
+        $project->load('team');
 
         return view('admin.projects.show', compact('project'));
     }
