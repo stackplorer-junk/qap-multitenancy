@@ -96,6 +96,26 @@ class PermissionsTableSeeder extends Seeder
             ],
             [
                 'id'    => 22,
+                'title' => 'team_create',
+            ],
+            [
+                'id'    => 23,
+                'title' => 'team_edit',
+            ],
+            [
+                'id'    => 24,
+                'title' => 'team_show',
+            ],
+            [
+                'id'    => 25,
+                'title' => 'team_delete',
+            ],
+            [
+                'id'    => 26,
+                'title' => 'team_access',
+            ],
+            [
+                'id'    => 27,
                 'title' => 'profile_password_edit',
             ],
         ];
