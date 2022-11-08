@@ -63,6 +63,8 @@ return [
             'updated_at_helper'        => ' ',
             'deleted_at'               => 'Deleted at',
             'deleted_at_helper'        => ' ',
+            'team'                     => 'Team',
+            'team_helper'              => ' ',
         ],
     ],
     'project' => [
@@ -83,6 +85,24 @@ return [
             'updated_at_helper'  => ' ',
             'deleted_at'         => 'Deleted at',
             'deleted_at_helper'  => ' ',
+        ],
+    ],
+    'team' => [
+        'title'          => 'Teams',
+        'title_singular' => 'Team',
+        'fields'         => [
+            'id'                => 'ID',
+            'id_helper'         => ' ',
+            'created_at'        => 'Created at',
+            'created_at_helper' => ' ',
+            'updated_at'        => 'Updated At',
+            'updated_at_helper' => ' ',
+            'deleted_at'        => 'Deleted At',
+            'deleted_at_helper' => ' ',
+            'name'              => 'Name',
+            'name_helper'       => ' ',
+            'owner'             => 'Owner',
+            'owner_helper'      => ' ',
         ],
     ],
 ];
